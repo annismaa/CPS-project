@@ -21,6 +21,7 @@ body {
 
 main {
   padding-top: 24px;
+  padding-bottom: 35px;
 }
 
 h1 {
@@ -277,6 +278,10 @@ label {
 }
 
 @media (min-width: 768px) {
+  main {
+    padding-bottom: 40px;
+  }
+
   .upper-menu {
     padding-left: 24px;
     padding-right: 24px;
@@ -369,6 +374,7 @@ label {
 @media (min-width: 1120px) {
   main {
     padding-top: 42px;
+    padding-bottom: 49px;
   }
 
   .upper-menu {
