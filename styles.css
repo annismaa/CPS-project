@@ -236,10 +236,17 @@ label {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  transition: 300ms;
 }
 
-.navbar__item:focus,
-.navbar__item:active {
+.navbar__item--active {
+  box-shadow: inset 2px 2px #b8ffec, inset -2px -2px #b8ffec,
+    inset -2px 2px #b8ffec, inset 2px -2px #b8ffec;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.navbar__item:hover {
   box-shadow: inset 2px 2px #b8ffec, inset -2px -2px #b8ffec,
     inset -2px 2px #b8ffec, inset 2px -2px #b8ffec;
   background-color: #ffffff;
