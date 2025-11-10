@@ -1,131 +1,102 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>CPS</title>
   </head>
   <body>
-    <header>
-      <nav class="upper-menu">
-        <div class="upper-menu__section upper-menu__section--left">
+    <aside class="sidebar">
+      <ul class="sidebar__header">
+        <li>
           <button
             type="button"
-            class="button button--pink button--burger upper-menu__button"
+            class="sidebar__button button button--pink button--close"
           ></button>
-          <div
-            class="upper-menu__divider upper-menu__divider--hidden upper-menu__divider--shown"
-          ></div>
-          <a href="#" class="upper-menu__logo"></a>
-        </div>
-        <div class="upper-menu__section upper-menu__section--center">
+        </li>
+        <li><a class="sidebar__logo logo"></a></li>
+        <li>
           <button
             type="button"
-            class="button button--pink button--phone upper-menu__button"
+            class="sidebar__button button button--pink button--search"
           ></button>
-          <button
-            type="button"
-            class="button button--pink button--chat upper-menu__button"
-          ></button>
-          <button
-            type="button"
-            class="button button--pink button--account upper-menu__button"
-          ></button>
-        </div>
-        <div class="upper-menu__divider"></div>
-        <div class="upper-menu__section upper-menu__section--right">
-          <button
-            type="button"
-            class="button button--pink button--request upper-menu__button"
-          ></button>
-          <button
-            type="button"
-            class="button button--pink button--checkstatus upper-menu__button"
-          ></button>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="page-title">
-        <h1 class="page-title__text">Услуги и сервисы</h1>
-        <div class="page-title__buttons">
-          <label for="request" class="page-title__label">Оставить заявку</label>
-          <button
-            type="button"
-            id="request"
-            class="button page-title__button button--pink button--request"
-          ></button>
-          <label for="status" class="page-title__label">Статус ремонта</label>
-          <button
-            type="button"
-            id="status"
-            class="button page-title__button button--pink button--checkstatus"
-          ></button>
-        </div>
-      </div>
-      <nav class="navbar">
-        <ul class="navbar__list">
-          <li class="navbar__item navbar__item--active">
-            <a href="#" class="navbar__link">Ремонтируемые устройства</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Дополнительные услуги</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Цены и услуги</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Специальные цены</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Адреса сервисных центров</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Отзывы</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="about-us">
-        <div class="about-us__column about-us__column--left">
-          <div class="about-us__text">
-            <p class="about-us__paragraph about-us__paragraph--first">
-              Мы являемся авторизованным сервисным центром по ремонту техники
-              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-              официальной гарантией производителя.
-            </p>
-            <p class="about-us__paragraph about-us__paragraph--second">
-              Мы успешно работаем с 1992 года и заслужили репутацию надежного
-              партнера, что подтверждает большое количество постоянных клиентов.
-              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-              очередь, советуют нас родным и близким.
-            </p>
-          </div>
-          <div class="about-us__button-wrapper">
+        </li>
+      </ul>
+      <ul class="sidebar__nav">
+        <li class="sidebar__item sidebar__item--active">
+          <a class="sidebar__link sidebar__link--active">Ремонт техники</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link">Услуги и сервисы</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link">Корпоративным клиентам</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link">Продавцам техники</a>
+        </li>
+        <li class="sidebar__item"><a class="sidebar__link">Партнерам</a></li>
+        <li class="sidebar__item">
+          <a class="sidebar__link">Производителям</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link">Наши сервисные центры</a>
+        </li>
+        <li class="sidebar__item"><a class="sidebar__link">Контакты</a></li>
+      </ul>
+      <div class="sidebar__footer">
+        <ul class="sidebar__contacts upper-menu__section--center">
+          <li>
             <button
               type="button"
-              class="button button--read-more about-us__button"
-            >
-              <span class="about-us__button-label">Читать далее</span>
-            </button>
-          </div>
+              class="button button--pink button--phone sidebar__button"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="button button--pink button--chat sidebar__button"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="button button--pink button--account sidebar__button"
+            ></button>
+          </li>
+        </ul>
+        <div class="sidebar__info">
+          <a href="mailto:mail@cps.com" class="sidebar__email">mail@cps.com</a>
+          <a href="tel:88008908900" class="sidebar__tel">8 800 890 8900</a>
         </div>
-        <figure class="about-us__column about-us__column--right">
-          <img
-            src="./images/csp-sign_cropped.png"
-            alt="Вывеска CPS"
-            class="about-us__image cps-sign--cropped"
-            width="100%"
-          />
-          <img
-            src="./images/cps-sign_full.png"
-            alt="Вывеска CPS"
-            class="about-us__image cps-sign--full"
-            width="100%"
-          />
-        </figure>
-      </section>
-    </main>
-    <footer></footer>
+        <ul class="sidebar__languages languages">
+          <li>
+            <button
+              type="button"
+              class="languages__button languages__button--active languages__button--ru button"
+            >
+              RU
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="languages__button languages__button--en button"
+            >
+              EN
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="languages__button languages__button--fr button"
+            >
+              FR
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
   </body>
 </html>
