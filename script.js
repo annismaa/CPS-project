@@ -1,3 +1,6 @@
+const breakpoint = 768;
+let mySwiper = null;
+
 function initSwiper() {
   const swiper = new Swiper(".brands__swiper", {
     slidesPerView: 1.25,
@@ -13,9 +16,17 @@ function initSwiper() {
   return swiper;
 }
 
-if (document.body.clientWidth < 768) {
-  initSwiper();
+function checkSwiper() {
+  if (document.body.clientWidth < breakpoint && !mySwiper) {
+    mySwiper = initSwiper();
+  } else if (document.body.clientWidth >= breakpoint && mySwiper) {
+    mySwiper.destroy(true, true);
+    mySwiper = null;
+  }
 }
+
+checkSwiper();
+window.addEventListener("resize", checkSwiper);
 
 const brandsList = document.querySelector(".brands__list");
 const buttonToggle = document.querySelector(".button--toggle");
