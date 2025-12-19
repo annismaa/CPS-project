@@ -1,70 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css" />
     <title>CPS</title>
   </head>
   <body>
-    <section class="brands">
-      <h2 class="brands__title repair-title">Ремонт техники различных брендов</h2>
-      <div class="swiper brands__swiper">
-        <div class="brands__list repair-list brands__list--hidden swiper-wrapper">
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/lenovo.svg" alt="lenovo-logo" width="108px" height="32px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/samsung.svg" alt="samsung-logo" width="116px" height="39px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/apple.svg" alt="apple-logo" width="44px" height="44px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/view-sonic.svg" alt="view-sonic-logo" width="128px" height="21px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/bosch.svg" alt="bosch-logo" width="128px" height="29px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/hp.svg" alt="hp-logo" width="52px" height="52px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/acer.svg" alt="acer-logo" width="94px" height="24px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/sony.svg" alt="sony-logo" width="128px" height="26px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/lenovo.svg" alt="lenovo-logo" width="108px" height="32px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/samsung.svg" alt="samsung-logo" width="116px" height="39px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-          <div class="brands__item repair-list__item swiper-slide">
-            <img class="brands__logo" src="icons/apple.svg" alt="apple-logo" width="44px" height="44px">
-            <button type="button" class="brands__button button button--chevron">
-          </div>
-        </div>
-        <div class="swiper-pagination brands__pagination"></div>
-      </div>
-      <button type="button" class="brands__toggle button button--toggle">
-        <span class="brands__button-icon"></span>
-        <label class="brands__button-label">Показать все</label>
-      </button>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <div class="feedback-container">
+      <section class="feedback-form forms">
+        <button
+          type="button"
+          class="feedback-form__button button button--pink button--close"
+        ></button>
+        <h2 class="feedback-form__title forms__title">Обратная связь</h2>
+        <form
+          action="#"
+          method="post"
+          class="feedback-form__content forms__content"
+        >
+          <input
+            type="text"
+            name="username"
+            placeholder="Имя"
+            class="feedback-form__input forms__input"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+            class="feedback-form__input forms__input"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+            class="feedback-form__input forms__input"
+          />
+          <textarea
+            name="message"
+            placeholder="Сообщение"
+            class="feedback-form__textarea forms__textarea"
+          ></textarea>
+          <p class="feedback-form__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="feedback-form__link">
+              обработку персональных данных</a
+            >
+            и соглашаетесь с нашей
+            <a href="#" class="feedback-form__link"
+              >политикой конфиденциальности</a
+            >
+          </p>
+          <button
+            type="button"
+            class="button button--submit button--chevron-white feedback-form__submit-button"
+          >
+            Отправить
+          </button>
+        </form>
+      </section>
+    </div>
   </body>
 </html>
