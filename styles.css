@@ -67,10 +67,8 @@ label {
   transform: scale(1.1);
 }
 
-.button--submit {
-  width: 136px;
+.button--pink-oval {
   height: 32px;
-  padding-left: 21px;
   background-color: #ff3e79;
   color: #ffffff;
   font-family: "TT Lakes", Arial, sans-serif;
@@ -84,9 +82,15 @@ label {
   transition: 300ms;
 }
 
-.button--submit:hover {
+.button--pink-oval:hover {
   background-color: #ff719c;
   transform: scale(1.1);
+}
+
+.button--submit {
+  width: 136px;
+  padding-left: 21px;
+  background-position: 110px 50%;
 }
 
 .button--close {
@@ -96,7 +100,6 @@ label {
 .button--chevron-white {
   background-image: url(./icons/chevron-white.svg);
   background-repeat: no-repeat;
-  background-position: 110px 50%;
 }
 
 .forms {
