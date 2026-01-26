@@ -1,47 +1,60 @@
 const breakpoint = 768;
-let mySwiper = null;
+const swipers = new Map();
 
-function initSwiper() {
-  const swiper = new Swiper(".brands__swiper", {
-    slidesPerView: 1.25,
+function initSwiper(swiperEl) {
+  const slidesPerView = swiperEl.classList.contains("my-swiper--table")
+    ? 1.2
+    : 1.25;
+
+  return new Swiper(swiperEl, {
+    slidesPerView,
     direction: "horizontal",
     loop: true,
     spaceBetween: 16,
     pagination: {
-      el: ".swiper-pagination",
+      el: swiperEl.querySelector(".swiper-pagination"),
       clickable: true,
     },
   });
-
-  return swiper;
 }
 
-function checkSwiper() {
-  if (document.body.clientWidth < breakpoint && !mySwiper) {
-    mySwiper = initSwiper();
-  } else if (document.body.clientWidth >= breakpoint && mySwiper) {
-    mySwiper.destroy(true, true);
-    mySwiper = null;
-  }
+function checkSwipers() {
+  const isMobile = document.body.clientWidth < breakpoint;
+  const swiperElements = document.querySelectorAll(".my-swiper");
+
+  swiperElements.forEach((swiperEl) => {
+    if (isMobile && !swipers.has(swiperEl)) {
+      const instance = initSwiper(swiperEl);
+      swipers.set(swiperEl, instance);
+    }
+
+    if (!isMobile && swipers.has(swiperEl)) {
+      swipers.get(swiperEl).destroy(true, true);
+      swipers.delete(swiperEl);
+    }
+  });
 }
 
-checkSwiper();
-window.addEventListener("resize", checkSwiper);
+checkSwipers();
+window.addEventListener("resize", checkSwipers);
 
-const brandsList = document.querySelector(".brands__list");
-const buttonToggle = document.querySelector(".button--toggle");
+function toggleList(button) {
+  const list = document.querySelector(".toggle-list");
 
-buttonToggle.addEventListener("click", () => {
-  brandsList.classList.toggle("brands__list--hidden");
+  if (!list) return;
 
-  const buttonToggleIcon = buttonToggle.querySelector(".brands__button-icon");
-  buttonToggleIcon.classList.toggle("brands__button-icon--rotated");
+  list.classList.toggle("toggle-list--hidden");
 
-  const buttonToggleText = buttonToggle.querySelector(".brands__button-label");
+  const icon = button.querySelector(".button--toggle__icon");
+  const label = button.querySelector(".button--toggle__label");
 
-  if (brandsList.classList.contains("brands__list--hidden")) {
-    buttonToggleText.textContent = "Показать все";
-  } else {
-    buttonToggleText.textContent = "Скрыть";
-  }
+  icon?.classList.toggle("button--toggle__icon--rotated");
+
+  label.textContent = list.classList.contains("toggle-list--hidden")
+    ? "Показать все"
+    : "Скрыть";
+}
+
+document.querySelectorAll(".button--toggle").forEach((button) => {
+  button.addEventListener("click", () => toggleList(button));
 });

@@ -67,13 +67,10 @@ label {
 }
 
 .brands__title {
-  display: flex;
-  align-items: center;
-  padding: 16px;
   height: 80px;
 }
 
-.repair-title {
+.swiper-title {
   text-transform: uppercase;
   color: #7e7e82;
   font-weight: 400;
@@ -81,6 +78,7 @@ label {
   line-height: 24px;
   letter-spacing: -0.2px;
   background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+  padding: 16px;
 }
 
 .brands__list {
@@ -119,14 +117,6 @@ label {
   display: none;
 }
 
-.brands__button-icon {
-  transition: 500ms;
-}
-
-.brands__button-icon--rotated {
-  transform: rotate(180deg);
-}
-
 .brands__swiper {
   padding-left: 16px;
   padding-top: 16px;
@@ -153,6 +143,9 @@ label {
 @media (min-width: 768px) {
   .brands__title {
     height: 56px;
+  }
+
+  .swiper-title {
     padding-left: 24px;
   }
 
@@ -167,7 +160,7 @@ label {
     row-gap: 16px;
   }
 
-  .brands__list--hidden {
+  .toggle-list--hidden {
     height: 160px;
     overflow: hidden;
     margin-bottom: 24px;
@@ -189,12 +182,6 @@ label {
     padding-bottom: 34px;
   }
 
-  .brands__button-icon {
-    width: 24px;
-    height: 24px;
-    background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
-  }
-
   .button--toggle {
     font-family: inherit;
     font-weight: 500;
@@ -202,10 +189,21 @@ label {
     line-height: 24px;
     letter-spacing: -0.2px;
   }
+
+  .button--toggle__icon {
+    width: 24px;
+    height: 24px;
+    background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
+    transition: 500ms;
+  }
+
+  .button--toggle__icon--rotated {
+    transform: rotate(180deg);
+  }
 }
 
 @media (min-width: 1120px) {
-  .brands__title {
+  .swiper-title {
     padding-left: 32px;
   }
 
