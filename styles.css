@@ -159,7 +159,7 @@ label {
   display: none;
 }
 
-.upper-menu__logo {
+.logo {
   background: url(./icons/logo.svg) no-repeat center;
   width: 97px;
   height: 51px;
@@ -240,15 +240,21 @@ label {
 }
 
 .navbar__item--active {
-  box-shadow: inset 2px 2px #b8ffec, inset -2px -2px #b8ffec,
-    inset -2px 2px #b8ffec, inset 2px -2px #b8ffec;
+  box-shadow:
+    inset 2px 2px #b8ffec,
+    inset -2px -2px #b8ffec,
+    inset -2px 2px #b8ffec,
+    inset 2px -2px #b8ffec;
   background-color: #ffffff;
   border-radius: 5px;
 }
 
 .navbar__item:hover {
-  box-shadow: inset 2px 2px #b8ffec, inset -2px -2px #b8ffec,
-    inset -2px 2px #b8ffec, inset 2px -2px #b8ffec;
+  box-shadow:
+    inset 2px 2px #b8ffec,
+    inset -2px -2px #b8ffec,
+    inset -2px 2px #b8ffec,
+    inset 2px -2px #b8ffec;
   background-color: #ffffff;
   border-radius: 5px;
 }
