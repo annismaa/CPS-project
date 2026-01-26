@@ -86,10 +86,12 @@ a {
   width: 320px;
   height: 100%;
   padding: 19px 24px 32px;
-  box-shadow: 16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05;
+  box-shadow:
+    16px 0px 52px 0px #0e185033,
+    -2px 0px 4px 0px #454f7e05;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2;
+  letter-spacing: -0.2px;
   font-weight: 500;
 }
 
