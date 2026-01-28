@@ -106,6 +106,18 @@ address {
   background-image: url(./icons/phone.svg);
 }
 
+.button--chat {
+  background-image: url(./icons/chat.svg);
+}
+
+.button--account {
+  background-image: url(./icons/account.svg);
+}
+
+.button--search {
+  background-image: url(./icons/search.svg);
+}
+
 .button--chevron:hover {
   background-color: #f7cad7;
   transform: scale(1.1);
@@ -382,7 +394,6 @@ address {
 }
 
 .sidebar {
-  display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -396,6 +407,102 @@ address {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+}
+
+.sidebar--active {
+  display: flex;
+}
+
+.sidebar--hidden {
+  display: none;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.sidebar__logo {
+  display: block;
+  margin-right: 78px;
+  margin-left: 17px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 448px;
+  height: 40vh;
+}
+
+.sidebar__item {
+  position: relative;
+  transition: 0.3s;
+}
+
+.sidebar__item:hover,
+.sidebar__item--active,
+.sidebar__email:hover,
+.sidebar__tel:hover,
+.languages__button:hover,
+.languages__button--active {
+  color: #7e7e82;
+}
+
+.sidebar__item:hover::before {
+  content: "";
+  width: 8px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: -28px;
+  top: -4px;
+}
+
+.sidebar__item--active::before {
+  content: "";
+  width: 8px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: -28px;
+  top: -4px;
+}
+
+.sidebar__footer {
+  margin-top: auto;
+}
+
+.sidebar__contacts {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sidebar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar__tel {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.sidebar__languages {
+  margin-top: 40px;
+}
+
+.languages {
+  display: flex;
+  gap: 7px;
 }
 
 .button--toggle__label {
@@ -997,6 +1104,10 @@ address {
     padding-bottom: 49px;
   }
 
+  .button--offer::after {
+    left: 332px;
+  }
+
   .upper-menu {
     display: none;
   }
@@ -1088,10 +1199,6 @@ address {
 
   .brands__toggle {
     margin-left: 31px;
-  }
-
-  .button--offer::after {
-    left: 332px;
   }
 
   .repair__title {

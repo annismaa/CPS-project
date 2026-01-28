@@ -39,9 +39,8 @@ checkSwipers();
 window.addEventListener("resize", checkSwipers);
 
 function toggleList(button) {
-  const list = document.querySelector(".toggle-list");
-
-  if (!list) return;
+  const section = button.closest("section");
+  const list = section.querySelector(".toggle-list");
 
   list.classList.toggle("toggle-list--hidden");
 
