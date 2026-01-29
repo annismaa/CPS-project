@@ -35,10 +35,6 @@ figure {
   margin: 0;
 }
 
-h1 {
-  margin: 0;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -49,17 +45,17 @@ p {
   margin: 0;
 }
 
-main {
-  padding-top: 24px;
-  padding-bottom: 35px;
-}
-
 label {
   cursor: pointer;
 }
 
 address {
   font-style: normal;
+}
+
+main {
+  padding-top: 24px;
+  padding-bottom: 35px;
 }
 
 .button {
@@ -87,65 +83,15 @@ address {
 .button--chevron {
   width: 40px;
   height: 40px;
-  border: 2px solid #ff3e79;
+  background: url(./icons/chevron.svg) no-repeat center;
   border-radius: 50%;
-  background: url(./icons/chevron.svg) no-repeat 50% 50%;
+  border: 2px solid #ff3e79;
   transition: 300ms;
 }
 
 .button--chevron:hover {
   background-color: #f7cad7;
   transform: scale(1.1);
-}
-
-.button--burger {
-  background-image: url(./icons/burger.svg);
-}
-
-.button--phone {
-  background-image: url(./icons/phone.svg);
-}
-
-.button--chat {
-  background-image: url(./icons/chat.svg);
-}
-
-.button--account {
-  background-image: url(./icons/account.svg);
-}
-
-.button--search {
-  background-image: url(./icons/search.svg);
-}
-
-.button--chevron:hover {
-  background-color: #f7cad7;
-  transform: scale(1.1);
-}
-
-.button--chevron-white {
-  background-image: url(./icons/chevron-white.svg);
-  background-repeat: no-repeat;
-}
-
-.button--request {
-  background-image: url(./icons/request.svg);
-}
-
-.button--checkstatus {
-  background-image: url(./icons/check-status.svg);
-}
-
-.button--close {
-  background-image: url(./icons/close.svg);
-}
-
-.button--toggle__icon {
-  transition: 500ms;
-}
-
-.button--toggle__icon--rotated {
-  transform: rotate(180deg);
 }
 
 .button--read-more {
@@ -220,6 +166,72 @@ address {
   height: 12px;
   background: url(./icons/chevron.svg) no-repeat;
   background-size: contain;
+}
+
+.button--submit {
+  padding-left: 21px;
+  width: 136px;
+  background-position: 110px 50%;
+}
+
+.button--burger {
+  background-image: url(./icons/burger.svg);
+}
+
+.button--phone {
+  background-image: url(./icons/phone.svg);
+}
+
+.button--chat {
+  background-image: url(./icons/chat.svg);
+}
+
+.button--account {
+  background-image: url(./icons/account.svg);
+}
+
+.button--search {
+  background-image: url(./icons/search.svg);
+}
+
+.button--chevron-white {
+  background-image: url(./icons/chevron-white.svg);
+  background-repeat: no-repeat;
+}
+
+.button--request {
+  background-image: url(./icons/request.svg);
+}
+
+.button--checkstatus {
+  background-image: url(./icons/check-status.svg);
+}
+
+.button--close {
+  background-image: url(./icons/close.svg);
+}
+
+.button--toggle {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.button--toggle__icon {
+  width: 24px;
+  height: 24px;
+  background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
+  transition: 500ms;
+}
+
+.button--toggle__icon--rotated {
+  transform: rotate(180deg);
+}
+
+.button--toggle__label {
+  cursor: pointer;
 }
 
 .upper-menu {
@@ -505,8 +517,58 @@ address {
   gap: 7px;
 }
 
-.button--toggle__label {
-  cursor: pointer;
+.brands {
+  border-top: 1px solid #d9fff5;
+  margin-top: 24px;
+}
+
+.brands__title {
+  height: 80px;
+}
+
+.brands__list {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.brands__toggle {
+  display: none;
+}
+
+.brands__swiper {
+  padding-left: 16px;
+  padding-top: 16px;
+  z-index: 0;
+  --add-bottom: 26px;
+  padding-bottom: var(--add-bottom);
+  box-sizing: border-box;
+}
+
+.brands__swiper::after {
+  content: "";
+  width: 24px;
+  height: 72px;
+  background-image: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+  position: absolute;
+  top: 16px;
+  right: 0px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.repair-list__item {
+  height: 72px;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
 }
 
 .repair,
@@ -527,7 +589,6 @@ address {
   letter-spacing: -0.2px;
   background-image: linear-gradient(to right, #f8f8f8, #ffffff);
   padding: 16px;
-  align-items: center;
 }
 
 .price-title {
@@ -665,6 +726,107 @@ address {
   letter-spacing: 0.2px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #d9fff5;
+  padding-top: 16px;
+  padding-bottom: 19px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #7e7e82;
+}
+
+.forms {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.forms__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.forms__title::before {
+  content: "";
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: -20px;
+  top: -8px;
+  clip-path: inset(0 0 0 50%);
+}
+
+.forms__input,
+.forms__textarea {
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  font-family: "TT Lakes", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
+  padding: 16px;
+  align-items: center;
+}
+
+.forms__textarea {
+  height: 118px;
+}
+
+.forms__input::placeholder,
+.forms__textarea::placeholder {
+  color: #b5b6bc;
+}
+
+.forms__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #7e7e82;
+}
+
+.forms__link {
+  color: #ff3e79;
+}
+
+.feedback-container {
+  background-color: rgba(255, 255, 255, 0.96);
+  height: 100%;
+}
+
+.feedback-form {
+  padding: 24px 16px;
+}
+
+.feedback-form__title {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.feedback-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback-form__submit-button {
+  margin-left: auto;
+}
+
 .swiper {
   box-sizing: border-box;
 }
@@ -684,103 +846,32 @@ address {
   background-color: #b5b6bc;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border: 1px solid #d9fff5;
-  padding-top: 16px;
-  padding-bottom: 19px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0px;
-  color: #7e7e82;
-}
-
-.swiper-title {
-  text-transform: uppercase;
-  color: #7e7e82;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  background-image: linear-gradient(to right, #f8f8f8, #ffffff);
-  padding: 16px;
-}
-
-.brands {
-  border-top: 1px solid #d9fff5;
-  margin-top: 24px;
-}
-
-.brands__title {
-  height: 80px;
-}
-
-.brands__list {
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.brands__swiper::after {
-  content: "";
-  width: 24px;
-  height: 72px;
-  background-image: linear-gradient(
-    270deg,
-    #f8f8f8 16.84%,
-    rgba(248, 248, 248, 0.0001) 100%
-  );
-  position: absolute;
-  top: 16px;
-  right: 0px;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.repair-list__item {
-  height: 72px;
-  padding: 16px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-}
-
-.brands__toggle {
-  display: none;
-}
-
-.brands__swiper {
-  padding-left: 16px;
-  padding-top: 16px;
-  z-index: 0;
-  --add-bottom: 26px;
-  padding-bottom: var(--add-bottom);
-  box-sizing: border-box;
-}
-
-.swiper-slide {
-  box-sizing: border-box;
-}
-
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #dddddd;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #b5b6bc;
-}
-
 @media (min-width: 768px) {
   main {
     padding-bottom: 40px;
+  }
+
+  .button--toggle {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .button--toggle__icon {
+    width: 24px;
+    height: 24px;
+    background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
+    transition: 500ms;
+  }
+
+  .button--toggle__icon--rotated {
+    transform: rotate(180deg);
+  }
+
+  .button--offer::after {
+    left: 323px;
   }
 
   .upper-menu {
@@ -894,16 +985,6 @@ address {
     row-gap: 16px;
   }
 
-  .toggle-list--hidden {
-    height: 160px;
-    overflow: hidden;
-    margin-bottom: 24px;
-  }
-
-  .repair-list__item {
-    width: 224px;
-  }
-
   .brands__swiper {
     padding: 0;
     --add-bottom: 0px;
@@ -914,25 +995,6 @@ address {
     gap: 8px;
     margin-left: 24px;
     padding-bottom: 34px;
-  }
-
-  .button--toggle {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
-
-  .button--toggle__icon {
-    width: 24px;
-    height: 24px;
-    background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
-    transition: 500ms;
-  }
-
-  .button--toggle__icon--rotated {
-    transform: rotate(180deg);
   }
 
   .repair__title {
@@ -977,18 +1039,6 @@ address {
     width: 24px;
     height: 24px;
     background: url(./icons/arrows.svg) no-repeat center / 7px 10px;
-  }
-
-  .button--toggle {
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
-
-  .button--offer::after {
-    left: 323px;
   }
 
   .prices {
@@ -1096,6 +1146,34 @@ address {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .forms {
+    width: 440px;
+    padding: 40px 32px;
+    box-shadow:
+      16px 0px 52px 0px #0e185033,
+      -2px 0px 4px 0px #454f7e05;
+    border-left: 1px solid #d9fff5;
+  }
+
+  .forms__title::before {
+    left: -37px;
+  }
+
+  .feedback-form {
+    margin-left: auto;
+    position: relative;
+  }
+
+  .feedback-form__button {
+    position: absolute;
+    left: -73px;
+    top: 32px;
+  }
+
+  .feedback-form__title {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -1193,12 +1271,12 @@ address {
     grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
   }
 
-  .repair-list__item {
-    width: 240px;
-  }
-
   .brands__toggle {
     margin-left: 31px;
+  }
+
+  .repair-list__item {
+    width: 240px;
   }
 
   .repair__title {
@@ -1217,10 +1295,6 @@ address {
 
   .repair__toggle {
     margin-left: 31px;
-  }
-
-  .swiper-title {
-    padding-left: 32px;
   }
 
   .prices {
@@ -1254,5 +1328,9 @@ address {
 
   .footer {
     padding: 32px 32px 21px;
+  }
+
+  .forms__title::before {
+    left: -37px;
   }
 }
