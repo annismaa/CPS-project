@@ -405,13 +405,22 @@ main {
   display: none;
 }
 
-.sidebar {
-  flex-direction: column;
+.sidebar-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 96.05%);
   position: fixed;
   top: 0;
+  z-index: 1000;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   height: 100%;
   padding: 19px 24px 32px;
+  margin-right: auto;
   background-color: #ffffff;
   box-shadow:
     16px 0px 52px 0px #0e185033,
@@ -419,10 +428,6 @@ main {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}
-
-.sidebar--active {
-  display: flex;
 }
 
 .sidebar--hidden {
@@ -666,7 +671,12 @@ main {
   text-align: start;
 }
 
-.prices__gradient {
+.prices__swiper {
+  padding: 16px 0 42px 8px;
+}
+
+.prices__swiper::after {
+  content: "";
   background: linear-gradient(
     270deg,
     #f8f8f8 16.84%,
@@ -678,10 +688,6 @@ main {
   top: 16px;
   right: 0;
   z-index: 1;
-}
-
-.prices__swiper {
-  padding: 16px 0 42px 8px;
 }
 
 .row {
@@ -744,6 +750,7 @@ main {
 .forms {
   height: 100%;
   background-color: #ffffff;
+  height: 100%;
 }
 
 .forms__title {
@@ -802,28 +809,38 @@ main {
   color: #ff3e79;
 }
 
-.feedback-container {
+.feedback-container,
+.request-container {
   background-color: rgba(255, 255, 255, 0.96);
   height: 100%;
 }
 
-.feedback-form {
+.feedback-form,
+.request-form {
   padding: 24px 16px;
 }
 
-.feedback-form__title {
+.feedback-form--hidden,
+.request-form--hidden {
+  display: none;
+}
+
+.feedback-form__title,
+.request-form__title {
   margin-top: 40px;
   margin-bottom: 24px;
   position: relative;
 }
 
-.feedback-form__content {
+.feedback-form__content,
+.request-form__content {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.feedback-form__submit-button {
+.feedback-form__submit-button,
+.request-form__submit-button {
   margin-left: auto;
 }
 
@@ -1160,18 +1177,21 @@ main {
     left: -37px;
   }
 
-  .feedback-form {
+  .feedback-form,
+  .request-form {
     margin-left: auto;
     position: relative;
   }
 
-  .feedback-form__button {
+  .feedback-form__button,
+  .request-form__button {
     position: absolute;
     left: -73px;
     top: 32px;
   }
 
-  .feedback-form__title {
+  .feedback-form__title,
+  .request-form__title {
     margin-top: 0;
   }
 }

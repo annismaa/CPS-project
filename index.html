@@ -47,6 +47,7 @@
         </div>
       </nav>
     </header>
+
     <main>
       <div class="page-title">
         <h1 class="page-title__text">Услуги и сервисы</h1>
@@ -291,7 +292,6 @@
               </li>
             </ul>
             <div class="swiper-pagination"></div>
-            <div class="prices__gradient"></div>
           </div>
           <p class="prices__text prices-text"
           >Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
@@ -314,7 +314,7 @@
         офертой</span>
     </footer>
 
-        <div class="feedback-container">
+    <div class="feedback-container feedback-form--hidden">
       <section class="feedback-form forms">
         <button
           type="button"
@@ -369,7 +369,60 @@
       </section>
     </div>
 
-    <aside class="sidebar sidebar--hidden">
+        
+    <div class="request-container request-form--hidden">
+      <section class="request-form forms">
+        <button
+          type="button"
+          class="request-form__button button button--pink button--close"
+        ></button>
+        <h2 class="request-form__title forms__title">Заказать звонок</h2>
+        <form
+          action="#"
+          method="post"
+          class="request-form__content forms__content"
+        >
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+            class="request-form__input forms__input"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+            class="feedback-form__input forms__input"
+          />
+          <textarea
+            name="message"
+            placeholder="Сообщение"
+            class="feedback-form__textarea forms__textarea"
+          ></textarea>
+          <p class="feedback-form__text forms__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#" class="feedback-form__link forms__link">
+              обработку персональных данных</a
+            >
+            и соглашаетесь с нашей
+            <a href="#" class="feedback-form__link forms__link"> 
+            <a href="#" class="request-form__link forms__link"
+              >политикой конфиденциальности</a
+            >
+          </p>
+          <button
+            type="button"
+            class="button button--pink-oval button--chevron-white button--submit feedback-form__submit-button"
+            class="button button--pink-oval button--chevron-white button--submit request-form__submit-button"
+          >
+            Отправить
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <div class="sidebar-wrapper sidebar--hidden">
+    <aside class="sidebar">
       <ul class="sidebar__header">
         <li>
           <button
@@ -460,6 +513,7 @@
         </ul> 
       </div>
     </aside>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
