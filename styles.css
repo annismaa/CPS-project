@@ -390,6 +390,15 @@ main {
   overflow: hidden;
 }
 
+.about-us__column .about-us__text--active {
+  max-height: none;
+  overflow: visible;
+}
+
+.about-us__text--active ~ .about-us__button-wrapper .button--read-more::before {
+  transform: rotate(180deg);
+}
+
 .about-us__paragraph {
   font-size: 14px;
   line-height: 18px;
@@ -452,6 +461,7 @@ main {
   justify-content: space-between;
   max-height: 448px;
   height: 40vh;
+  margin-bottom: 20px;
 }
 
 .sidebar__item {
@@ -813,6 +823,11 @@ main {
 .request-container {
   background-color: rgba(255, 255, 255, 0.96);
   height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
 }
 
 .feedback-form,
@@ -1068,6 +1083,10 @@ main {
     border-radius: 5px;
   }
 
+  .prices__swiper::after {
+    display: none;
+  }
+
   .prices__table {
     display: flex;
     flex-direction: column;
@@ -1200,10 +1219,15 @@ main {
   main {
     padding-top: 42px;
     padding-bottom: 49px;
+    margin-left: 320px;
   }
 
   .button--offer::after {
     left: 332px;
+  }
+
+  .sidebar__button--search {
+    margin-left: auto;
   }
 
   .upper-menu {
@@ -1277,6 +1301,26 @@ main {
     margin-top: 14px;
   }
 
+  .sidebar-wrapper {
+    display: flex;
+    width: 320px;
+  }
+
+  .sidebar {
+    box-shadow: none;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+
+  .sidebar__logo {
+    margin: 0;
+    margin-right: 120px;
+  }
+
+  .sidebar__button--close {
+    display: none;
+  }
+
   .swiper-title {
     padding-left: 32px;
   }
@@ -1348,6 +1392,7 @@ main {
 
   .footer {
     padding: 32px 32px 21px;
+    margin-left: 320px;
   }
 
   .forms__title::before {
