@@ -1,0 +1,41 @@
+.feedback-form {
+  padding: 24px 16px;
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+    position: relative;
+    padding: 40px 24px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__button {
+    @media (min-width: 768px) {
+      position: absolute;
+      left: -73px;
+      top: 32px;
+    }
+  }
+
+  &__submit-button {
+    margin-left: auto;
+  }
+}

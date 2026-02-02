@@ -1,0 +1,9 @@
+.toggle-list {
+  &--hidden {
+    @media (min-width: 768px) {
+      height: 160px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+  }
+}

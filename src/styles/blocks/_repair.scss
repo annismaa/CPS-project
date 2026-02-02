@@ -1,0 +1,94 @@
+@use "../variables" as v;
+
+.repair {
+  border-top: 1px solid v.$borderTopColor;
+
+  &__title {
+    height: 80px;
+
+    @media (min-width: 768px) {
+      height: 56px;
+      padding-left: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 32px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 16px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      box-sizing: border-box;
+      margin: 24px 0;
+      margin-bottom: 46px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(224px, 224px));
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+
+    @media (min-width: 1120px) {
+      padding: 0 32px;
+      column-gap: 32px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+    }
+  }
+
+  &__swiper {
+    padding: 16px 0 26px 16px;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      --add-bottom: 0px;
+    }
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 160px;
+      background-image: linear-gradient(
+        270deg,
+        v.$backgroundColorGrey 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+      position: absolute;
+      top: 16px;
+      right: 0px;
+      pointer-events: none;
+      z-index: 10;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  &__button-icon {
+    width: 24px;
+    height: 24px;
+    background: url(../icons/arrows.svg) no-repeat center / 7px 10px;
+  }
+
+  &__label {
+    align-self: flex-start;
+  }
+
+  &__toggle {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 8px;
+      margin-left: 24px;
+      padding-bottom: 34px;
+    }
+
+    @media (min-width: 1120px) {
+      margin-left: 31px;
+    }
+  }
+}

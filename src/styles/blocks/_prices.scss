@@ -1,0 +1,127 @@
+@use "../variables" as v;
+
+.prices {
+  border-top: 1px solid v.$borderTopColor;
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: 1120px) {
+    margin-top: 16px;
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__content {
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    padding: 0 16px;
+
+    @media (min-width: 768px) {
+      width: 470px;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 485px;
+    }
+  }
+
+  &__button {
+    padding: 16px 16px 0 16px;
+    text-align: start;
+
+    @media (min-width: 768px) {
+      padding: 16px 24px 0 24px;
+      width: 350px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 380px;
+    }
+  }
+
+  &__swiper {
+    padding: 16px 0 42px 8px;
+
+    @media (min-width: 768px) {
+      margin: 7px 24px 24px;
+      padding: 0%;
+      border-radius: 5px;
+    }
+
+    @media (min-width: 1120px) {
+      margin: 7px 32px 32px;
+    }
+
+    &::after {
+      content: "";
+      background: linear-gradient(
+        270deg,
+        v.$backgroundColorGrey 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+      width: 24px;
+      height: 200px;
+      position: absolute;
+      top: 16px;
+      right: 0;
+      z-index: 1;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__table {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &::before {
+      @media (min-width: 768px) {
+        content: "";
+        width: 16px;
+        height: 320px;
+        background-color: v.$backgroundColorWhite;
+        border-radius: 5px;
+        position: absolute;
+        top: 64px;
+        left: 0px;
+        z-index: 1;
+      }
+    }
+
+    &::after {
+      @media (min-width: 768px) {
+        content: "";
+        width: 16px;
+        height: 320px;
+        background-color: v.$backgroundColorWhite;
+        border-radius: 5px;
+        position: absolute;
+        top: 64px;
+        right: 0px;
+        z-index: 1;
+      }
+    }
+  }
+}

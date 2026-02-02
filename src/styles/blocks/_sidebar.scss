@@ -1,0 +1,160 @@
+@use "../variables" as v;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100%;
+  padding: 19px 24px 32px;
+  margin-right: auto;
+  background-color: v.$backgroundColorWhite;
+  box-shadow:
+    16px 0px 52px 0px #0e185033,
+    -2px 0px 4px 0px #454f7e05;
+  font-size: v.$fontSize;
+  line-height: v.$lineHeight;
+  letter-spacing: -0.2px;
+
+  @media (min-width: 1120px) {
+    box-shadow: none;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 46px;
+  }
+
+  &__logo {
+    display: block;
+    margin-right: 78px;
+    margin-left: 17px;
+
+    @media (min-width: 1120px) {
+      margin: 0;
+      margin-right: 120px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 448px;
+    height: 40vh;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: v.$fontSize;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+
+    &:hover {
+      color: v.$otherText;
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: v.$textBeforeColor;
+        position: absolute;
+        left: -28px;
+        top: -4px;
+      }
+    }
+
+    &--active {
+      color: v.$otherText;
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: v.$textBeforeColor;
+        position: absolute;
+        left: -28px;
+        top: -4px;
+      }
+    }
+  }
+
+  &__email {
+    font-weight: 500;
+    font-size: v.$fontSize;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+
+    &:hover {
+      color: v.$otherText;
+    }
+  }
+
+  &__tel {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+
+    &:hover {
+      color: v.$otherText;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__languages {
+    margin-top: 40px;
+  }
+
+  &__button {
+    &--search {
+      margin-left: auto;
+    }
+
+    &--close {
+      @media (min-width: 1120px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.sidebar-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 96.05%);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  @media (min-width: 1120px) {
+    display: flex;
+    width: 320px;
+  }
+}

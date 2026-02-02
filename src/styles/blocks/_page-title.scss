@@ -1,0 +1,63 @@
+@use "../variables" as v;
+
+.page-title {
+  position: relative;
+  padding-left: 16px;
+
+  @media (min-width: 768px) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: v.$textBeforeColor;
+    position: absolute;
+    left: -5px;
+    top: 0;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+  }
+
+  &__buttons {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    @media (min-width: 1120px) {
+      margin-left: 8px;
+
+      &:first-of-type {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__label {
+    @media (min-width: 1120px) {
+      font-weight: 500;
+      font-size: v.$fontSize;
+      line-height: v.$lineHeight;
+      letter-spacing: -0.2px;
+    }
+  }
+}

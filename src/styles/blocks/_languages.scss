@@ -1,0 +1,22 @@
+@use "../variables" as v;
+
+.languages {
+  display: flex;
+  gap: 7px;
+  font-weight: 500;
+  font-size: v.$fontSize;
+  line-height: v.$lineHeight;
+  letter-spacing: -0.2px;
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    &:hover {
+      color: v.$otherText;
+    }
+
+    &--active {
+      color: v.$otherText;
+    }
+  }
+}

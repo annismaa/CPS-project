@@ -1,0 +1,204 @@
+@use "../variables" as v;
+
+.button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--pink {
+    width: v.$buttonPinkWidth;
+    height: v.$buttonPinkHeight;
+    background-color: v.$buttonColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transition: 300ms;
+
+    &:hover {
+      background-color: v.$buttonHoverColor;
+      transform: scale(1.1);
+    }
+  }
+
+  &--chevron {
+    width: v.$buttonPinkWidth;
+    height: v.$buttonPinkHeight;
+    background: url(../icons/chevron.svg) no-repeat center;
+    border-radius: 50%;
+    border: 2px solid v.$buttonColor;
+    transition: 300ms;
+
+    &:hover {
+      background-color: #f7cad7;
+      transform: scale(1.1);
+    }
+  }
+
+  &--read-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    color: v.$mainText;
+    font-size: v.$fontSize;
+    font-weight: 500;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+
+    &::before {
+      content: "";
+      background: url(../icons/arrows.svg) no-repeat 7px 10px;
+      background-position: 50% 50%;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+  }
+
+  &--pink-oval {
+    height: 32px;
+    background-color: v.$buttonColor;
+    color: v.$backgroundColorWhite;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: v.$lineHeight;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -0.15px;
+    border-radius: 16px;
+    transition: 300ms;
+    z-index: 2;
+
+    &:hover {
+      background-color: v.$buttonHoverColor;
+      transform: scale(1.1);
+    }
+  }
+
+  &--order {
+    width: 119px;
+    padding-left: 12px;
+    background-position: 96px 50%;
+  }
+
+  &--offer {
+    width: 220px;
+    position: relative;
+    transition: 300ms;
+    font-family: TT Lakes;
+    font-weight: 500;
+    font-size: v.$fontSize;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+
+    &:hover {
+      color: v.$buttonHoverColor;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 127px;
+      bottom: 4px;
+      width: 6px;
+      height: 12px;
+      background: url(../icons/chevron.svg) no-repeat;
+      background-size: contain;
+
+      @media (min-width: 768px) {
+        left: 323px;
+      }
+
+      @media (min-width: 1120px) {
+        left: 332px;
+      }
+    }
+  }
+
+  &--submit {
+    padding-left: 21px;
+    width: 136px;
+    background-position: 110px 50%;
+  }
+
+  &--burger {
+    background-image: url(../icons/burger.svg);
+  }
+
+  &--phone {
+    background-image: url(../icons/phone.svg);
+  }
+
+  &--chat {
+    background-image: url(../icons/chat.svg);
+  }
+
+  &--account {
+    background-image: url(../icons/account.svg);
+  }
+
+  &--search {
+    background-image: url(../icons/search.svg);
+  }
+
+  &--chevron-white {
+    background-image: url(../icons/chevron-white.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--request {
+    background-image: url(../icons/request.svg);
+  }
+
+  &--checkstatus {
+    background-image: url(../icons/check-status.svg);
+  }
+
+  &--close {
+    background-image: url(../icons/close.svg);
+  }
+
+  &--toggle {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: v.$fontSize;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+
+    @media (min-width: 768px) {
+      font-family: inherit;
+      font-weight: 500;
+      font-size: v.$fontSize;
+      line-height: v.$lineHeight;
+      letter-spacing: -0.2px;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+      background: url(../icons/arrows.svg) no-repeat center / 7px 10px;
+      transition: 500ms;
+
+      @media (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+        background: url(../icons/arrows.svg) no-repeat center / 7px 10px;
+        transition: 500ms;
+      }
+
+      &--rotated {
+        transform: rotate(180deg);
+
+        @media (min-width: 768px) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__label {
+      cursor: pointer;
+    }
+  }
+}

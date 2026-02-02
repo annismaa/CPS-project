@@ -1,0 +1,21 @@
+@use "../variables" as v;
+
+.repair-list__item {
+  width: 240px;
+  height: 160px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: v.$backgroundColorWhite;
+  border: 1px solid v.$borderColor;
+  border-radius: 6px;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+
+  @media (min-width: 1120px) {
+    width: 240px;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../variables" as v;
+
+.brands-list__item {
+  height: 72px;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$backgroundColorWhite;
+  border: 1px solid v.$borderColor;
+  border-radius: 6px;
+
+  @media (min-width: 1120px) {
+    width: 240px;
+  }
+}

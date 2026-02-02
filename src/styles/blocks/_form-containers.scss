@@ -1,0 +1,12 @@
+@use "../variables" as v;
+
+.feedback-container,
+.request-container {
+  background-color: v.$formsBackgroundColor;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+}

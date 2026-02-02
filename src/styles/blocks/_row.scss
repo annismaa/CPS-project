@@ -1,0 +1,76 @@
+@use "../variables" as v;
+
+.row {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 16px;
+  padding-bottom: 0;
+  background-color: v.$backgroundColorWhite;
+  border-radius: 5px;
+  border: 1px solid v.$borderColor;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 54% 14% 15% 119px;
+    height: 64px;
+    padding: 16px;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid v.$borderColor;
+    border-radius: 5px;
+    background-color: v.$backgroundColorWhite;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 16px 24px;
+  }
+
+  &:last-child {
+    @media (min-width: 768px) {
+      border: none;
+    }
+  }
+
+  &--hidden {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: grid;
+      box-sizing: border-box;
+      background-color: unset;
+      border: none;
+      padding-bottom: 8px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-bottom: 8px;
+    }
+  }
+
+  &__label {
+    color: v.$otherText;
+    font-weight: 500;
+    letter-spacing: 0;
+
+    &--hidden {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+}

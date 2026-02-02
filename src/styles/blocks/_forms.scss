@@ -1,0 +1,79 @@
+@use "../variables" as v;
+
+.forms {
+  height: 100%;
+  background-color: v.$backgroundColorWhite;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    width: 440px;
+    padding: 40px 32px;
+    box-shadow:
+      16px 0px 52px 0px #0e185033,
+      -2px 0px 4px 0px #454f7e05;
+    border-left: 1px solid v.$borderTopColor;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: v.$textBeforeColor;
+      position: absolute;
+      left: -20px;
+      top: -8px;
+      clip-path: inset(0 0 0 50%);
+
+      @media (min-width: 768px) {
+        left: -29px;
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid v.$borderColor;
+    border-radius: 8px;
+    font-family: "TT Lakes", Arial, sans-serif;
+    font-weight: 500;
+    font-size: v.$fontSize;
+    line-height: v.$lineHeight;
+    letter-spacing: -0.2px;
+    background-image: linear-gradient(
+      to right,
+      v.$backgroundColorGrey,
+      v.$backgroundColorWhite
+    );
+    padding: 16px;
+    align-items: center;
+
+    &::placeholder {
+      color: v.$placeholderColor;
+    }
+  }
+
+  &__textarea {
+    height: 118px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: v.$otherText;
+  }
+
+  &__link {
+    color: v.$buttonColor;
+  }
+}

@@ -1,0 +1,89 @@
+@use "../variables" as v;
+
+.brands {
+  border-top: 1px solid v.$borderTopColor;
+  margin-top: 24px;
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: 1120px) {
+    margin-top: 51px;
+  }
+
+  &__title {
+    height: 80px;
+
+    @media (min-width: 768px) {
+      height: 56px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 16px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      box-sizing: border-box;
+      margin: 24px 0;
+      margin-bottom: 46px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(224px, 224px));
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+
+    @media (min-width: 1120px) {
+      padding: 0 32px;
+      column-gap: 32px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 8px;
+      margin-left: 24px;
+      padding-bottom: 34px;
+    }
+
+    @media (min-width: 1120px) {
+      margin-left: 31px;
+    }
+  }
+
+  &__swiper {
+    padding-left: 16px;
+    padding-top: 16px;
+    z-index: 0;
+    --add-bottom: 26px;
+    padding-bottom: var(--add-bottom);
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+      padding: 0;
+      --add-bottom: 0px;
+    }
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 72px;
+      background-image: linear-gradient(
+        270deg,
+        v.$backgroundColorGrey 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+      position: absolute;
+      top: 16px;
+      right: 0px;
+      pointer-events: none;
+      z-index: 10;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.cps-sign {
+  &--full {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &--cropped {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../variables" as v;
+
+.swiper-title {
+  text-transform: uppercase;
+  color: v.$otherText;
+  font-weight: 400;
+  font-size: v.$fontSize;
+  line-height: v.$lineHeight;
+  letter-spacing: -0.2px;
+  background-image: linear-gradient(
+    to right,
+    v.$backgroundColorGrey,
+    v.$backgroundColorWhite
+  );
+  padding: 16px;
+
+  @media (min-width: 768px) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-left: 32px;
+  }
+}
