@@ -10,8 +10,14 @@ function setupToggleBlock({
   const openButtons = document.querySelectorAll(openButtonsSelector);
   const closeButtons = wrapper.querySelectorAll(closeButtonsSelector);
 
-  const open = () => wrapper.classList.remove(hiddenClass);
-  const close = () => wrapper.classList.add(hiddenClass);
+  const open = () => {
+    wrapper.classList.remove(hiddenClass);
+    document.body.classList.add("body--menu-open");
+  };
+  const close = () => {
+    wrapper.classList.add(hiddenClass);
+    document.body.classList.remove("body--menu-open");
+  };
 
   openButtons.forEach((btn) => btn.addEventListener("click", open));
 

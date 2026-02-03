@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server ./ --open=./index.html",
     "dev": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "html-webpack-plugin": "^5.6.6",
     "live-server": "^1.2.2",

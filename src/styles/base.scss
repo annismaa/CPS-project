@@ -20,6 +20,10 @@ body {
   background-color: v.$backgroundColorGrey;
 }
 
+body.body--menu-open {
+  overflow: hidden;
+}
+
 h1,
 h2 {
   margin: 0;
